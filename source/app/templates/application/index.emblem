@@ -1,0 +1,14 @@
+%span
+  | this is the index page
+
+%ul
+  each message in messages
+    %li
+      =message.message
+
+%form
+  .input-group
+    Ember.TextField placeholder="Enter a message" valueBinding="newMessage.message"
+    .input-group-btn
+      button.btn.btn-primary click="sendMessage"
+        | SEND
